@@ -11,7 +11,7 @@ const HomePage = () => {
   );
 };
 
-const TopicList = () => {
+const TopicsList = () => {
   return (
     <div>
       <h1>TOPIC LIST PAGE</h1>
@@ -31,7 +31,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <p>Hello World</p>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/topics" component={TopicsList} />
+        <Route path="/topics/:topicId" component={TopicDetail} />
       </div>
     );
   }
